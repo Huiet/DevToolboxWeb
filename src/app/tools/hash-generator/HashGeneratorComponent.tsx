@@ -10,10 +10,10 @@ import { saveHistory } from "@/utils/clientUtils";
 
 export default function HashGeneratorComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [input, setInput] = useState("");
   const [md5Hash, setMd5Hash] = useState("");
@@ -30,7 +30,7 @@ export default function HashGeneratorComponent({
     if (debouncedInput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.HashGenerator,
         onError: () => {},
         metadata: {

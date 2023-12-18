@@ -55,10 +55,10 @@ const dedupingOptions = [
 ];
 export default function LineSortAndDedupeComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [currentSortingOption, setCurrentSortingOption] =
     useState<SortingOption>(SortingOption.AtoZ);
@@ -72,7 +72,7 @@ export default function LineSortAndDedupeComponent({
     if (debouncedOutput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.LineSortAndDedupe,
         onError: () => {},
         metadata: {

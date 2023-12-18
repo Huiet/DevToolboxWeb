@@ -24,10 +24,8 @@ const timeOptions = [
 
 export default function UnixTimeConverterComponent({
   user,
-  isProUser,
 }: {
   user: User | null;
-  isProUser: boolean;
 }) {
   const [timeOption, setTimeOption] = useState<TimeOption>(
     timeOptions[0].value
@@ -50,7 +48,6 @@ export default function UnixTimeConverterComponent({
     if (debouncedTimeString) {
       void saveHistory({
         user,
-        isProUser,
         toolType: ToolType.UnixTimeConverter,
         onError: () => {},
         metadata: {

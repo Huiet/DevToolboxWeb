@@ -2,7 +2,7 @@ import UnixTimeConverterComponent from "@/app/tools/unix-time-converter/UnixTime
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const UnixTimeConverter = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <UnixTimeConverterComponent user={user} isProUser={isProUser} />;
+  const { user} = await getUserAndSubscriptionState();
+  return <UnixTimeConverterComponent user={user} />;
 };
 export default UnixTimeConverter;

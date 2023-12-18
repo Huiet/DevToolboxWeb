@@ -8,10 +8,10 @@ import { ToolType } from "@prisma/client";
 
 export default function AsciiConverterComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [normalString, setNormalString] = useState("DevToolbox");
   const [asciiString, setAsciiString] = useState(
@@ -25,7 +25,7 @@ export default function AsciiConverterComponent({
     if (debouncedNormalString && debouncedAsciiString) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.ColorConverter,
         onError: () => {},
         metadata: {

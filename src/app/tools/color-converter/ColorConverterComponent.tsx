@@ -11,10 +11,10 @@ const isHSLColor =
 
 export default function ColorConverterComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [rgb, setRgb] = useState("255, 255, 255");
   const [rgba, setRgba] = useState("255, 255, 255, 1");
@@ -30,7 +30,7 @@ export default function ColorConverterComponent({
     if (debouncedRgb && debouncedHex && debouncedRgba && debouncedHsl) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.ColorConverter,
         onError: () => {},
         metadata: {

@@ -2,7 +2,7 @@ import JsonValidatorComponent from "@/app/tools/json-validator/JsonValidatorComp
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const JsonValidator = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <JsonValidatorComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <JsonValidatorComponent user={user} />;
 };
 export default JsonValidator;

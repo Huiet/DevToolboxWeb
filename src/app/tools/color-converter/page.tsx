@@ -2,7 +2,7 @@ import ColorConverterComponent from "@/app/tools/color-converter/ColorConverterC
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const ColorConverter = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <ColorConverterComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <ColorConverterComponent user={user} />;
 };
 export default ColorConverter;

@@ -2,7 +2,7 @@ import QrCodeGeneratorComponent from "@/app/tools/qrcode-generator/QrCodeGenerat
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const QrCodeGeneratorPage = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <QrCodeGeneratorComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <QrCodeGeneratorComponent user={user} />;
 };
 export default QrCodeGeneratorPage;

@@ -2,7 +2,7 @@ import RegexCheckerComponent from "@/app/tools/regex-checker/RegexCheckerCompone
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const RegexCheckerPage = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <RegexCheckerComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <RegexCheckerComponent user={user} />;
 };
 export default RegexCheckerPage;

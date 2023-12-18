@@ -27,10 +27,10 @@ const options = [
 
 export default function Base64ImageEncoderComponent({
     user,
-    isProUser,
+    
 }: {
     user: User | null;
-    isProUser: boolean;
+    
 }) {
     const [input, setInput] = useState("");
     const [image, setImage] = useState<File | null>(null);
@@ -42,7 +42,7 @@ export default function Base64ImageEncoderComponent({
         if (debouncedOutput) {
             void saveHistory({
                 user,
-                isProUser,
+                
                 toolType: ToolType.Base64ImageEncoder,
                 onError: () => {
                 },
@@ -79,7 +79,7 @@ export default function Base64ImageEncoderComponent({
                 } string`
             );
         }
-    }, [currentOption, input, image, isProUser, user]);
+    }, [currentOption, input, image,  user]);
 
     function handleImageInput(event: React.ChangeEvent<HTMLInputElement>) {
         if (event.target.files && event.target.files[0])

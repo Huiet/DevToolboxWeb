@@ -83,10 +83,8 @@ const options = [
 ];
 export default function StringConverterComponent({
   user,
-  isProUser,
 }: {
   user: User | null;
-  isProUser: boolean;
 }) {
   const [transformationOption, setTransformationOption] =
     useState<TransformationOption>(options[0].value);
@@ -99,7 +97,6 @@ export default function StringConverterComponent({
     if (debouncedOutput) {
       void saveHistory({
         user,
-        isProUser,
         toolType: ToolType.StringConverter,
         onError: () => {},
         metadata: {

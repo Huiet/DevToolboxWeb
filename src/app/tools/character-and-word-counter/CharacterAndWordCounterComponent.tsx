@@ -26,10 +26,10 @@ const filterOptions = [
 
 export default function CharacterAndWordCounterComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
@@ -45,7 +45,7 @@ export default function CharacterAndWordCounterComponent({
     if (debouncedInput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.CharacterAndWordCounter,
         onError: () => {},
         metadata: {

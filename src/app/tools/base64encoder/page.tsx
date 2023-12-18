@@ -2,7 +2,7 @@ import Bas64EncoderComponent from "@/app/tools/base64encoder/Base64EncoderClient
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const Base64Encoder = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <Bas64EncoderComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <Bas64EncoderComponent user={user} />;
 };
 export default Base64Encoder;

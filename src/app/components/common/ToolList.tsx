@@ -107,16 +107,6 @@ export default function ToolList() {
           </p>
         </div>
       </SignedOut>
-      <Link
-        className={`w-full border-y p-4 hover:bg-gray-600`}
-        href={`https://github.com/YourAverageTechBro/DevToolboxWeb`}
-        target="_blank"
-      >
-        <div className={"flex items-center gap-2 "}>
-          <StarIcon className={"w-6 h-6"} />
-          Star Us On Github
-        </div>
-      </Link>
       {toolList.sort((a,b) => {
         if (a.name < b.name) return -1;
         else if (a.name > b.name) return 1;

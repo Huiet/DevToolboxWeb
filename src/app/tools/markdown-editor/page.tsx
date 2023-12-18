@@ -2,7 +2,7 @@ import MarkdownEditorComponent from "@/app/tools/markdown-editor/MarkdownEditorC
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const MarkdownEditorPage = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <MarkdownEditorComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <MarkdownEditorComponent user={user} />;
 };
 export default MarkdownEditorPage;

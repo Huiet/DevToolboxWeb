@@ -10,10 +10,10 @@ import useDebounce from "@/app/hooks/useDebounce";
 
 export default function JsonValidatorComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [output, setOutput] = useState("");
   const debouncedOutput = useDebounce(output, 1000);
@@ -21,7 +21,7 @@ export default function JsonValidatorComponent({
     if (debouncedOutput && debouncedOutput !== initialInput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.JsonValidator,
         onError: () => {},
         metadata: {

@@ -10,10 +10,8 @@ import { saveHistory } from "@/utils/clientUtils";
 
 export default function UrlParserComponent({
   user,
-  isProUser,
 }: {
   user: User | null;
-  isProUser: boolean;
 }) {
   const [input, setInput] = useState("");
   const [protocol, setProtocol] = useState("");
@@ -28,7 +26,6 @@ export default function UrlParserComponent({
     if (debouncedInput) {
       void saveHistory({
         user,
-        isProUser,
         toolType: ToolType.UrlParser,
         onError: () => {},
         metadata: {

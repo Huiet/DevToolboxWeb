@@ -2,7 +2,7 @@ import CharacterAndWordCounterComponent from "@/app/tools/character-and-word-cou
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const CharacterAndWordCounterPage = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <CharacterAndWordCounterComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <CharacterAndWordCounterComponent user={user} />;
 };
 export default CharacterAndWordCounterPage;

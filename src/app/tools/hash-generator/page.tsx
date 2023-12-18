@@ -2,7 +2,7 @@ import HashGeneratorComponent from "@/app/tools/hash-generator/HashGeneratorComp
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const HashGenerator = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <HashGeneratorComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <HashGeneratorComponent user={user} />;
 };
 export default HashGenerator;

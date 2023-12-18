@@ -26,10 +26,10 @@ const options = [
 
 export default function Bas64EncoderComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
@@ -40,7 +40,7 @@ export default function Bas64EncoderComponent({
     if (debouncedOutput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.Base64Encoder,
         onError: () => {},
         metadata: {
@@ -73,7 +73,7 @@ export default function Bas64EncoderComponent({
         } string`
       );
     }
-  }, [currentOption, input, isProUser, user]);
+  }, [currentOption, input,  user]);
 
   // Example usage
   return (

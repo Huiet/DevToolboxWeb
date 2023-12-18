@@ -8,10 +8,10 @@ import QRCode from "react-qr-code";
 
 export default function QrCodeGeneratorComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [qrText, setQrText] = useState("http://devtoolbox.co");
 
@@ -21,7 +21,7 @@ export default function QrCodeGeneratorComponent({
     if (debouncedQrText) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.QrCodeGenerator,
         onError: () => {},
         metadata: { qrText },

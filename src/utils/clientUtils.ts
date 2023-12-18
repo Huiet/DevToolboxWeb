@@ -6,15 +6,13 @@ export const saveHistory = async ({
   toolType,
   metadata,
   onError,
-  isProUser,
 }: {
   user: User | null;
   toolType: ToolType;
   metadata: Record<string, any>;
   onError: (error: string) => void;
-  isProUser: boolean;
 }) => {
-  if (!isProUser || !user) {
+  if (!user) {
     return;
   }
   const resp = await fetch("/api/history", {

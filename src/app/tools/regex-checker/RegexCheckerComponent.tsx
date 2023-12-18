@@ -9,10 +9,10 @@ import { ToolType } from "@prisma/client";
 
 export default function RegexCheckerComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [regexExpression, setRegexExpression] = useState(
     "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}"
@@ -34,7 +34,7 @@ export default function RegexCheckerComponent({
     if (debouncedOutput) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.RegexChecker,
         onError: () => {},
         metadata: {

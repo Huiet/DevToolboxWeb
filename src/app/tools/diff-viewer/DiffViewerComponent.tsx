@@ -10,10 +10,10 @@ import { saveHistory } from "@/utils/clientUtils";
 
 export default function DiffViewerComponent({
   user,
-  isProUser,
+  
 }: {
   user: User | null;
-  isProUser: boolean;
+  
 }) {
   const [originalText, setOriginalText] = React.useState("");
   const [newText, setNewText] = React.useState("");
@@ -24,7 +24,7 @@ export default function DiffViewerComponent({
     if (debouncedOriginalText) {
       void saveHistory({
         user,
-        isProUser,
+        
         toolType: ToolType.DiffViewer,
         onError: () => {},
         metadata: {

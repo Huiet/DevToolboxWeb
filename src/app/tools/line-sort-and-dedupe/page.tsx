@@ -2,7 +2,7 @@ import LineSortAndDedupeComponent from "@/app/tools/line-sort-and-dedupe/LineSor
 import { getUserAndSubscriptionState } from "@/actions/user";
 
 const LineSortAndDedupe = async () => {
-  const { user, isProUser } = await getUserAndSubscriptionState();
-  return <LineSortAndDedupeComponent user={user} isProUser={isProUser} />;
+  const { user } = await getUserAndSubscriptionState();
+  return <LineSortAndDedupeComponent user={user} />;
 };
 export default LineSortAndDedupe;
