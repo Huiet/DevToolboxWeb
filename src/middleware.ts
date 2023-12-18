@@ -8,7 +8,6 @@ export default authMiddleware({
     "/",
     "/sign-in",
     "/tools(.*)",
-    "/successful-purchase",
     "/api/webhooks/stripe",
   ],
 });

@@ -17,8 +17,7 @@ model History {
 }
 
 model Subscriptions {
-  stripeCustomerId   String             @id
-  clerkUserId        String
+  clerkUserId        String  @id
   subscriptionStatus SubscriptionStatus
 }
 
