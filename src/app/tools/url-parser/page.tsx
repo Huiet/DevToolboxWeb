@@ -1,8 +1,8 @@
 import UrlParserComponent from "@/app/tools/url-parser/UrlParserComponent";
-import { getUserAndSubscriptionState } from "@/actions/user";
+import { getCurrentUser } from "@/actions/user";
 
 const UrlParserPage = async () => {
-  const { user} = await getUserAndSubscriptionState();
+  const { user} = await getCurrentUser();
   return <UrlParserComponent user={user}/>;
 };
 export default UrlParserPage;

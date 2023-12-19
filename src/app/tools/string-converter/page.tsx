@@ -1,8 +1,8 @@
 import StringConverterComponent from "@/app/tools/string-converter/StringConverterComponent";
-import { getUserAndSubscriptionState } from "@/actions/user";
+import { getCurrentUser } from "@/actions/user";
 
 const StringConverterPage = async () => {
-  const { user } = await getUserAndSubscriptionState();
+  const { user } = await getCurrentUser();
   return <StringConverterComponent user={user} />;
 };
 export default StringConverterPage;

@@ -1,5 +1,4 @@
-import { Button } from "@/app/components/common/Button";
-import { getUserAndSubscriptionState } from "@/actions/user";
+import { getCurrentUser } from "@/actions/user";
 import Link from "next/link";
 import prisma from "@/db/prisma";
 import { getPathFromToolType } from "@/utils/clientUtils";
@@ -12,7 +11,7 @@ const fetchUserHistory = async (userId: string) =>
   });
 
 export default async function HistoryPage() {
-  const { user } = await getUserAndSubscriptionState();
+  const { user } = await getCurrentUser();
   const history = user?.id ? await fetchUserHistory(user.id) : null;
   if(!history) {
     return 'No history found';
@@ -32,6 +31,8 @@ export default async function HistoryPage() {
                 index % 2 === 0 ? "bg-gray-800" : "bg-gray-300 text-black"
               } rounded-md`}
             >
+              {/*todo: add query param to populate each field when you click this*/}
+              {/*todo: clear history mode*/}
               {entry.metadata &&
                 Object.entries(entry.metadata).map(([_, value]) => (
                   <Link

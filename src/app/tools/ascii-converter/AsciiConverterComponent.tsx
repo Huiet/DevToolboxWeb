@@ -25,8 +25,7 @@ export default function AsciiConverterComponent({
     if (debouncedNormalString && debouncedAsciiString) {
       void saveHistory({
         user,
-        
-        toolType: ToolType.ColorConverter,
+        toolType: ToolType.AsciiConverter,
         onError: () => {},
         metadata: {
           normalString,

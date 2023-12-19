@@ -1,8 +1,8 @@
 import DiffViewerComponent from "@/app/tools/diff-viewer/DiffViewerComponent";
-import { getUserAndSubscriptionState } from "@/actions/user";
+import { getCurrentUser } from "@/actions/user";
 
 const DiffViewer = async () => {
-  const { user } = await getUserAndSubscriptionState();
+  const { user } = await getCurrentUser();
   return <DiffViewerComponent user={user} />;
 };
 export default DiffViewer;

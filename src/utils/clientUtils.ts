@@ -21,6 +21,7 @@ export const saveHistory = async ({
       userId: user.id,
       toolType,
       metadata: JSON.stringify(metadata),
+      userEmail: user.emailAddresses?.[0]?.emailAddress,
     }),
   });
   const data = await resp.json();

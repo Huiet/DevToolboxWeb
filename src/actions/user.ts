@@ -1,7 +1,7 @@
 "use server";
 import { currentUser } from "@clerk/nextjs";
 
-export const getUserAndSubscriptionState = async () => {
+export const getCurrentUser = async () => {
   const user = await currentUser();
   return {
     user,
