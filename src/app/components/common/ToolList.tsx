@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Button } from "@/app/components/common/Button";
-import { StarIcon } from "@heroicons/react/24/outline";
 
 export type ToolOption = {
   name: string;
@@ -86,6 +85,14 @@ export default function ToolList() {
   const pathname = usePathname();
   return (
     <div className="w-72 bg-gray-700 flex flex-col overflow-y-scroll">
+      <Link
+        className={`w-full border-b p-4 hover:bg-gray-600`}
+        key={'Home'}
+        href={'/'}
+      >
+        <p> {'Home'}</p>
+      </Link>
+
       <SignedIn>
         <div className={"px-2 my-4 flex justify-between w-full"}>
           <UserButton afterSignOutUrl="/tools/json-validator" />
@@ -101,9 +108,7 @@ export default function ToolList() {
           </Button>
           <p className={"text-xs text-gray-200"}>
             {" "}
-            You only have to create an account if you want to upgrade to
-            DevToolbox Pro which saves your history so you can keep track of all
-            the actions you have done.
+            Log in to save input history.
           </p>
         </div>
       </SignedOut>
