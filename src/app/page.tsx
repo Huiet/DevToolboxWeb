@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ExternalLinkButton } from '@/app/components/common/ExternalLinkButton';
+import { Bars3CenterLeftIcon, LinkIcon, MagnifyingGlassIcon, WrenchIcon } from '@heroicons/react/20/solid';
 
 export default function Example() {
   return (
@@ -19,7 +21,7 @@ export default function Example() {
                 y={-1}
                 patternUnits="userSpaceOnUse"
               >
-                <path d="M.5 200V.5H200" fill="none" />
+                <path d="M.5 200V.5H200" fill="none"/>
               </pattern>
             </defs>
             <svg x="50%" y={-1} className="overflow-visible fill-gray-800/20">
@@ -48,16 +50,47 @@ export default function Example() {
             />
           </div>
           <div className="h-screen">
-            <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-              <div className="mt-10 flex items-center gap-x-6">
-                <Link
-                  href="/tools/diff-viewer"
-                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Developer Tools
-                </Link>
-              </div>
+            <h1 className={"text-3xl p-8"}>Useful Stuff For Developers</h1>
+            <div className="mt-10 flex flex-col items-start gap-x-6 m-8">
+              <Link
+                href="/tools/diff-viewer"
+                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+              >
+                Developer Tools
+              </Link>
+
             </div>
+              <h2 className={"text-2xl pl-8 pt-20"}>Useful External Sites</h2>
+            <section className={"flex flex-col items-start gap-4 p-8 "}>
+              <ExternalLinkButton
+                href={'https://www.realtimecolors.com/?colors=0f0f0f-ffffff-155831-d7e4dc-c20002&fonts=Poppins-Poppins'}>
+                <div className={'flex'}>
+                  <div>Realtime Colors</div>
+                  <LinkIcon className={"w-4 h-4 ml-2 mt-0.5"}/>
+                </div>
+              </ExternalLinkButton>
+              <ExternalLinkButton
+                href={'https://www.phind.com/search?home=true'}>
+                <div className={'flex'}>
+                  <div>Phind (AI search)</div>
+                  <MagnifyingGlassIcon className={"w-4 h-4 ml-2 mt-0.5"}/>
+                </div>
+              </ExternalLinkButton>
+              <ExternalLinkButton
+                href={'https://omatsuri.app/'}>
+                <div className={'flex'}>
+                  <div>Omatsuri</div>
+                  <WrenchIcon className={"w-4 h-4 ml-2 mt-0.5"}/>
+                </div>
+              </ExternalLinkButton>
+              <ExternalLinkButton
+                href={'https://www.fontpair.co/all'}>
+                <div className={'flex'}>
+                  <div>Font Pair</div>
+                  <Bars3CenterLeftIcon className={"w-4 h-4 ml-2 mt-0.5"}/>
+                </div>
+              </ExternalLinkButton>
+            </section>
 
           </div>
         </div>
